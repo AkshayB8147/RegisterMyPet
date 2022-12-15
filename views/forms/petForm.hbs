@@ -1,0 +1,61 @@
+<!-- Form Starts -->
+    <div class="container">
+
+        {{!-- <form action="/save-details" method="post"> --}}
+        <form action="/register-pet" method="post">
+            <!-- Owner Details -->
+            <h1>Owner Details</h1>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ownerName">Full Name</label>
+                    <input type="text" class="form-control" id="ownerName" name="ownerName" placeholder="Full Name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="ownerPhone">Phone</label>
+                    <input type="ownerPhone" class="form-control" id="ownerPhone" name="ownerPhone" placeholder="Phone">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="ownerEamil">Email address</label>
+                    <input type="ownerEamil" class="form-control" id="ownerEamil" name="ownerEamil" placeholder="example@gmail.com">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Example@123">
+                  </div>
+                
+                  <div class="form-group col">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="">
+                  </div>
+            </div>
+
+            <!-- Pet Details -->
+            <h1>Pet Details</h1>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="petName">Pet Name</label>
+                    <input type="text" class="form-control" id="petName" name="petName" placeholder="Pet Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="breed">Breed</label>
+                    <input type="text" class="form-control" id="breed" name="breed" placeholder="Bread">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="petGender">Pet Gender</label>
+                    <select class="form-control" id="petGender" name="petGender">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="dob">Breed</label>
+                    <input type="date" class="form-control" id="dob" name="dob">
+                </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Register My Pet</button>
+        </form>
+
+    </div>
+    <!-- Form Ends -->
