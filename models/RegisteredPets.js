@@ -5,23 +5,26 @@ let AddressSchema=mongoose.Schema({
     city:String,
     pincode:Number,
 });
-let OwnerDetailsSchema=mongoose.Schema({
-    ownerName:String,
-    ownerPhone:Number,
-    ownerEmail:String,
-    password:String,
-});
+
 let RegisterPetSchema=new mongoose.Model({
     petName:String,
     petBreed:String,
     petGender:String,
     petDob:Date,
-    ownerDetails:{
-        type:OwnerDetails,
+});
+
+let OwnerDetailsSchema=mongoose.Schema({
+    ownerName:String,
+    ownerPhone:Number,
+    ownerEmail:String,
+    password:String,
+    petDetails:{
+        type:RegisterPetSchema,
     },
     address:{
         type:AddressSchema,
     },
 });
-let RegisteredPet = mongoose.model("RegisterPet", RegisterPetSchema);
+
+let RegisteredPet = mongoose.model("RegisterPet", OwnerDetailsSchema);
 module.exports=RegisteredPet;
