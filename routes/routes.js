@@ -5,7 +5,6 @@ const RegisterPet = require('../controller/RegisterPet');
 const RegisterDoc = require('../controller/RegisterDoctor');
 const Login=require('../controller/Login');
 const FindDoctor=require('../controller/FindDoctor');
-// let FindDoctor=require('../controller/FindDoctor');
 const ensureAuthenticated=require('../models/Auth');
 
 
